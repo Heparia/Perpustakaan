@@ -1,3 +1,10 @@
+import '../scss/styles.scss';
+import Icon from '../asset/image/logo.png';
+import _ from 'lodash';
+import * as bootstrap from 'bootstrap';
+import Alert from 'bootstrap/js/dist/alert';
+import { Tooltip, Toast, Popover } from 'bootstrap';
+
 import BookParameters from "./handle/book/book-parameters.js";
 import BookRunner from "./handle/book/book-runner.js";
 import display from "./display/display.js";
@@ -14,3 +21,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const newData = await BookRunner.runnerGet(BookParameters.downloadByEpub(["harry", "potter"]))
     console.log(newData)
 })
+
+const component = () => {
+    const elements = document.querySelectorAll('.logo');
+    elements.forEach((element) => {
+      const myIcon = new Image();
+      myIcon.src = Icon; 
+      element.appendChild(myIcon);
+    });
+  };
+  
+component();

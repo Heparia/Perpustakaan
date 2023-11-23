@@ -1,5 +1,5 @@
 const display = (data) => {
-    document.getElementById("content").innerText = data.items[0].volumeInfo.title;
+    console.log("Berhasil masuk display");
 }
 
 export default display;
