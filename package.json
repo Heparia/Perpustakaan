@@ -8,8 +8,13 @@
     "start": "webpack serve --config webpack.dev.js",
     "serve": "http-server dist",
     "start:prod": "npm run build && npm run serve",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "url": "git+https://github.com/Heparia/Perpustakaan.git"
+  },
+  "homepage": "http://Heparia.github.io/Perpustakaan",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -27,6 +32,7 @@
     "favicons": "^7.1.4",
     "favicons-webpack-plugin": "^6.0.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.0",
     "html-webpack-plugin": "^5.5.3",
     "postcss-loader": "^7.3.3",
     "sass": "^1.69.5",
