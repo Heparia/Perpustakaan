@@ -1,15 +1,14 @@
 const config = {
-    endpoint: 'https://newsapi.org/v2/top-headlines',
-    api_key: 'c1042d146c934e7891c3a55f8ecfaeb1',
+    endpoint: 'https://newsdata.io/api/1/news',
+    api_key: 'pub_333522ce09d0c46c2a0283c538b3c0d550221',
 };
 
-class NewsApi {
+class NewsDataApi {
     static async get(data) {
-        const response = await fetch(`${config.endpoint}?${data}`, {
+        const response = await fetch(`${config.endpoint}?apikey=${config.api_key}&${data}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization' :`${config.api_key}`
             }            
         })
         const responseJson = response.json()
@@ -17,4 +16,4 @@ class NewsApi {
     }
 }
 
-export default NewsApi;
+export default NewsDataApi;
