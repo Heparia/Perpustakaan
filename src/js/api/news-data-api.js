@@ -1,6 +1,8 @@
+require('dotenv').config();
+
 const config = {
     endpoint: 'https://newsdata.io/api/1/news',
-    api_key: 'pub_333522ce09d0c46c2a0283c538b3c0d550221',
+    api_key: process.env.NEWS_DATA_IO_API_KEY,
 };
 
 class NewsDataApi {

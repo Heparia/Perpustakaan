@@ -1,6 +1,8 @@
+require('dotenv').config();
+
 const config = {
     endpoint: 'https://www.googleapis.com/books/v1/',
-    api_key: 'AIzaSyAZHw3ImIuQ1FrHSt5uWUXJVPuFPiMQz6c',
+    api_key: process.env.GOOGLE_BOOKS_API_KEY,
 };
 
 class GoogleBooksApi {
