@@ -32,7 +32,6 @@ Unsur Penilaian :
 - Kemudian ketik **npm run start** untuk menjalankan project mode development
 - Ketik **npm run build** untuk menjalankan project mode production
 - Push ke dalam repository github menggunakan git atau github deskop
-- Masuk ke menu settings, kemudian ubah deploy ke sub-brance
 - Ketik **npm run deploy** untuk membuat sub-branche dan ikuti petunjuk yang ada
+- Masuk ke menu settings, kemudian ubah deploy ke sub-brance
 - Project sudah berhasil di hosting melalui github pages
-# Terima kasih
