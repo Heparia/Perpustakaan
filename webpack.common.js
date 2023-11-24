@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
+require('dotenv').config();
 
 module.exports = {
     entry: {
@@ -14,8 +17,23 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({ template: './src/index.html' }),
-        new FaviconsWebpackPlugin('./src/asset/image/logo.png')
+        new FaviconsWebpackPlugin('./src/asset/image/logo.png'),
+        new Dotenv(),
+        new webpack.ProvidePlugin({
+          process: 'process/browser'
+       })
     ],
+    resolve: {
+      fallback: {
+        "path": require.resolve("path-browserify"),
+        "os": require.resolve("os-browserify/browser"),
+        "crypto": require.resolve("crypto-browserify"),
+        "stream": require.resolve("stream-browserify")
+      },
+      alias: {
+        process: "process/browser"
+      },
+    },    
     module: {
         rules: [
           {

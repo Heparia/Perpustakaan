@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+console.log(process.env)
 const config = {
     endpoint: 'https://newsdata.io/api/1/news',
     api_key: process.env.NEWS_DATA_IO_API_KEY,
