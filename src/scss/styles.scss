@@ -1,8 +1,18 @@
 @import "bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
 
+:root {
+    --coklat: #A7727D;
+    --nude: #EDDBC7;
+    --nudelight: #F8EAD8;
+    --nudexxlight: #F9F5E7;
+    --white: white;
+    --black: black;
+}
+
 body {
     font-family: 'Poppins', 'Montserrat',sans-serif;
+    display: block;
 }
 .logo > img{
     width: 50px;
@@ -18,4 +28,122 @@ body {
     align-items: center;
 }
 
-  
+.light-dark-mode {
+    z-index: 0;
+    background-color: var(--nudexxlight);
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.switcher {
+    z-index: 1;
+    background-color: var(--coklat);
+    width:40px;
+    height: 40px; 
+    border-radius: 10px; 
+
+}
+.icon-mode {
+    position: absolute;
+    width: 80px;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2px;
+}
+.mode > img {
+    width: 36px;
+}
+
+@keyframes panjang {
+    0% {
+        width: 40px;
+    }
+    50% {
+        width: 60px;
+    }
+    100% {
+        width: 80px;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(-100px);
+    }
+}
+@keyframes moveRight {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: calc(100px);
+    }
+}
+#search-button {
+    display: flex;
+    align-items: center;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 30
+}
+
+header {
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 5% 10%;
+}
+.head-img >img{
+    width: 400px;
+}
+.flex-right, .flex-left {
+    width: 500px;
+    font-size: 20px;
+}
+.penulis {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-style: italic;
+}
+.nama {
+    color: var(--coklat);
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+.sep {
+    width: 100px;
+    background-color: var(--nude);
+    height: 5px;
+    margin: 10px;
+}
+
+footer {
+    border-top: var(--coklat) 2px solid;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+footer p {
+    font-style: italic;
+}.footer-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

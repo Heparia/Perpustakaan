@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Perpustakaan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
     <nav class="navbar navbar-expand-xl">
@@ -27,11 +28,47 @@
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+            <button class="btn" type="submit" id="search-button">
+              <span class="material-symbols-outlined">search</span>
+            </button>
           </form>
+          <div class="light-dark-mode">
+            <div class="switcher" id="switch-theme">
+              <div class="icon-mode">
+                <div class="dark-icon mode"></div>
+                <div class="light-icon mode"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
+    <header>
+      <div class="flex-left">
+        <h1 class="nama">Selamat datang!</h1>
+        <div class="kata-kata-mutiara">
+          <div class="kalimat">
+            <p>Membaca buku-buku yang baik berarti memberi  makanan rohani yang baik</p>
+          </div>
+          <div class="penulis">
+            <div class="sep"></div>
+            <p>Buya Hamka</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-right">
+        <div class="head-img"></div>
+      </div>
+    </header>
+    <main></main>
+    <footer>
+      <div class="footer-bottom">
+        <p>
+            &copy; 2023 Copyright. All rights reserved.
+        </p>
+        <p>Heparia Arum Ndaru Ramdhani | Seli Agustina</p>
+    </div>
+    </footer>
   </body>
 </html>
