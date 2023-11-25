@@ -16,7 +16,10 @@ module.exports = {
         assetModuleFilename: 'src/assets/images/[name].[ext]'
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: './src/index.html' }),
+        new HtmlWebpackPlugin({
+          template: './src/index.html',
+          filename: 'index.html',
+        }),
         new FaviconsWebpackPlugin('./src/asset/image/logo.png'),
         new Dotenv(),
         new webpack.ProvidePlugin({

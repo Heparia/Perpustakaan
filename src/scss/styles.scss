@@ -147,3 +147,21 @@ footer p {
     flex-direction: row;
     justify-content: space-between;
 }
+.book-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 15%;
+}
+.book-container button {
+    background-color: var(--coklat);
+    border-color: var(--coklat);
+}
+.card {
+    max-height: 400px;
+    align-items: center;
+}
+.card img {
+    height: 198.5px;
+    width: 120px;
+}
