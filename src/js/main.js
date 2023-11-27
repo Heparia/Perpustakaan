@@ -7,28 +7,22 @@ import darkIcon from '../asset/image/dark.png';
 import head from '../asset/image/head.png';
 
 import BookDefault from './handle/book/book-default.js';
-import BookRender from './display/book-render.js';
+import DisplayMain from './display/display-main.js';
 
 import _ from 'lodash';
 import * as bootstrap from 'bootstrap';
 import Alert from 'bootstrap/js/dist/alert';
 import { Tooltip, Toast, Popover } from 'bootstrap';
 
-import display from "./display/display.js";
 
 require('dotenv').config();
 
-document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-      link.addEventListener('click', async function(event) {
-          event.preventDefault();
-          const pageName = this.getAttribute('data-page');
-          if(pageName =="buku"){
-            BookRender(await BookDefault());
-          }
-      });
-  });
+const defaultBook = {
+  'filter': 'free-ebooks',
+  'listQuery' : ['teknologi', 'edukasi', 'pendidikan', 'informatika', 'komputer'],
+}
+
+const loadComponent = () => {
   const elements = document.querySelectorAll('.logo');
   const iconLight = document.querySelectorAll('.light-icon');
   const iconDark = document.querySelectorAll('.dark-icon');
@@ -37,4 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
   component(iconLight, lightIcon);
   component(iconDark, darkIcon);
   component(headImg, head);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadComponent()
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+      link.addEventListener('click', async function(event) {
+          event.preventDefault();
+          const pageName = this.getAttribute('data-page');
+          if(pageName == "buku"){
+            const data = await BookDefault(defaultBook);
+            DisplayMain(data);
+          }
+      });
+  });
 });
+

@@ -1,0 +1,10 @@
+book-container {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+book-item {
+    width: 350px;
+}

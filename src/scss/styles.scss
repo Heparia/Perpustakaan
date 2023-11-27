@@ -1,5 +1,6 @@
 @import "bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+@import url('others/carousel.scss');
 
 :root {
     --coklat: #A7727D;
@@ -58,34 +59,7 @@ body {
     width: 36px;
 }
 
-@keyframes panjang {
-    0% {
-        width: 40px;
-    }
-    50% {
-        width: 60px;
-    }
-    100% {
-        width: 80px;
-    }
-}
 
-@keyframes moveLeft {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: calc(-100px);
-    }
-}
-@keyframes moveRight {
-    0% {
-        right: 0;
-    }
-    100% {
-        right: calc(100px);
-    }
-}
 #search-button {
     display: flex;
     align-items: center;
@@ -164,4 +138,10 @@ footer p {
 .card img {
     height: 198.5px;
     width: 120px;
+}
+.carousel-item.active.book {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: auto;
 }

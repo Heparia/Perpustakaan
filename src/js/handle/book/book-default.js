@@ -1,9 +1,9 @@
 import BookParameters from "./book-parameters.js";
 import BookRunner from "./book-runner.js";
 
-const BookDefault = async () => {
-    const listQuery = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
-    const filter = 'free-ebooks';
+const BookDefault = async (data) => {
+    const listQuery = data.listQuery
+    const filter = data.filter || null;
     let hasil = [];
     const promises = listQuery.map(async q => {
         const data = await BookRunner.runnerGet(BookParameters.filter(q, filter));
