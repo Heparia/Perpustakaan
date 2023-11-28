@@ -7,4 +7,13 @@ book-container {
 }
 book-item {
     width: 350px;
+    margin: 20px;
+}
+
+book-container > div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }

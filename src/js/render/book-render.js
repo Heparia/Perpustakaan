@@ -11,6 +11,8 @@ const getRightTitle = (data) => {
 
 const BookRender = (data) => {
   const sectionBook = document.createElement('book-container');
+  sectionBook.className = 'carousel-item'
+  const div = document.createElement('div')
   try {
     const value = 6;
     for (let index = 0; index < value && index < data.items.length; index++) {
@@ -22,7 +24,8 @@ const BookRender = (data) => {
         'date': `${element.volumeInfo.publishedDate}`
       };
       bookItem.result = bookData;
-      sectionBook.appendChild(bookItem);
+      div.appendChild(bookItem)
+      sectionBook.appendChild(div);
       console.log("masuk ke book renderrr");
     }
     

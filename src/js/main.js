@@ -8,6 +8,8 @@ import head from '../asset/image/head.png';
 
 import BookDefault from './handle/book/book-default.js';
 import DisplayMain from './display/display-main.js';
+import DisplayHeader from './display/display-header.js';
+import theme from './handle/theme.js';
 
 import _ from 'lodash';
 import * as bootstrap from 'bootstrap';
@@ -16,6 +18,8 @@ import { Tooltip, Toast, Popover } from 'bootstrap';
 
 
 require('dotenv').config();
+
+theme()
 
 const defaultBook = {
   'filter': 'free-ebooks',
@@ -42,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const pageName = this.getAttribute('data-page');
           if(pageName == "buku"){
             const data = await BookDefault(defaultBook);
+            DisplayHeader()
             DisplayMain(data);
           }
       });

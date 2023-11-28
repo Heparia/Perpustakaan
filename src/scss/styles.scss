@@ -1,6 +1,8 @@
 @import "bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
-@import url('others/carousel.scss');
+@import url('buku-page/carousel.scss');
+@import url('buku-page/header-book.scss');
+@import url('buku-page/tools.scss');
 
 :root {
     --coklat: #A7727D;
@@ -14,13 +16,14 @@
 body {
     font-family: 'Poppins', 'Montserrat',sans-serif;
     display: block;
+    overflow-x: hidden;
 }
 .logo > img{
     width: 50px;
 }
 
 .navbar {
-    background-color: white;
+    background-color: transparent;
 }
 
 .navbar-brand {
@@ -121,27 +124,7 @@ footer p {
     flex-direction: row;
     justify-content: space-between;
 }
-.book-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 0 15%;
-}
-.book-container button {
-    background-color: var(--coklat);
-    border-color: var(--coklat);
-}
-.card {
-    max-height: 400px;
-    align-items: center;
-}
 .card img {
     height: 198.5px;
     width: 120px;
-}
-.carousel-item.active.book {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: auto;
 }
