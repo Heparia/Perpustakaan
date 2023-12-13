@@ -5,18 +5,33 @@ class BookParameters {
         const parameter = `volumes?q=${ParserForApi(data)}`
         return parameter;
     }
-    static standard = (data, terms, value_terms) => {
-        const parameter = `volumes?q=${ParserForApi(data)}+${terms}:${value_terms}`
+    static standard = (terms, value_terms) => {
+        const parameter = `+${terms}:${value_terms}`
         return parameter
     }
 
-    static downloadByEpub = (data) => {
-        const parameter = `volumes?q=${ParserForApi(data)}&download=epub`
+    static downloadByEpub = () => {
+        const parameter = `&download=epub`
         return parameter
     }
 
-    static filter = (data, terms) => {
-        const parameter = `volumes?q=${ParserForApi(data)}&filter=${terms}`
+    static filter = (terms) => {
+        const parameter = `&filter=${terms}`
+        return parameter
+    }
+
+    static pengurutan = (terms) => {
+        const parameter = `&orderBy=${terms}`
+        return parameter
+    }
+
+    static proyeksi = (terms) => {
+        const parameter = `&projection=${terms}`
+        return parameter
+    }
+
+    static percetakan = (terms) => {
+        const parameter = `&printType=${terms}`
         return parameter
     }
 }

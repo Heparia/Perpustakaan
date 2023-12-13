@@ -1,6 +1,6 @@
-import BookCaraousel from "../render/book-caraousel";
-import BookFiltering from "../render/book-filtering";
-import PaginationButton from "../render/pagination-button";
+import BookCaraousel from "../../render/book-caraousel";
+import BookFiltering from "../../render/book-filtering";
+import PaginationButton from "../../render/pagination-button";
 
 
 const DisplayMain = (data) => {

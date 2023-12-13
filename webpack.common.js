@@ -2,8 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const webpack = require('webpack');
-const Dotenv = require('dotenv-webpack');
-require('dotenv').config();
 
 module.exports = {
     entry: {
@@ -21,7 +19,6 @@ module.exports = {
           filename: 'index.html',
         }),
         new FaviconsWebpackPlugin('./src/asset/image/logo.png'),
-        new Dotenv(),
         new webpack.ProvidePlugin({
           process: 'process/browser'
        })
@@ -62,9 +59,9 @@ module.exports = {
             ],
           },
           {
-            test: /\.(png|jpg|gif|svg|eot|ttf|woff)$/,
-            type: 'asset/resource'
-          }
+            test: /\.(png|jpe?g|gif|svg|webp|eot|ttf|woff)$/i,
+            type: 'asset/resource',
+          },          
         ],
       },
 }

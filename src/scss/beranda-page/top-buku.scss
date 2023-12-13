@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+:root{
+    --lebar: 370px;
+    --panjang: 490px;
+}
+
+#topBook {
+    background-color: var(--nudexxlight);
+    padding: 5%;
+    width: auto;
+}
+
+.c-see-item {
+    width: var(--lebar);
+    height: var(--panjang);
+    display: none;
+}
+.c-see-item.active{
+    display: block;
+}
+.c-see {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+}
+.c-see-inner {
+    z-index: 5;
+    width: calc(var(--lebar) - 20px);
+}
+.c-see button {
+    width: calc(var(--lebar)/2);
+    height: fit-content;
+    background-color: transparent;
+    border: transparent;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.c-see button img {
+    width: calc(calc(var(--lebar)/2) + 20px);
+    height: calc(calc(var(--panjang)/2) + 40px);
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+.c-see button:hover{
+    transform: scale(1.1);
+    z-index: 10;
+}
+.c-see:hover {
+    z-index: 10;
+}
+.c-see:hover ~ .c-see-text {
+    opacity: 0.3;
+}
+.c-see button:hover .front {
+    display: none;
+}
+.front {
+    position: absolute;
+    z-index: 3;
+    width: calc(calc(var(--lebar)/2) + 50px);
+    height: calc(calc(var(--panjang)/2) + 50px);
+    left: 0px;
+    top: 0px;
+}
+.front.n {
+    box-shadow: -100px 1px 100px 1px var(--nudexxlight) inset;
+    -webkit-box-shadow: -100px 1px 100px 1px var(--nudexxlight) inset;
+    -moz-box-shadow: -100px 1px 100px 1px var(--nudexxlight) inset;
+    background: linear-gradient(to left, var(--nudexxlight), transparent);
+}
+.front.p {
+    box-shadow: 100px 1px -100px 1px var(--nudexxlight) inset;
+    -webkit-box-shadow: 100px 1px -100px 1px var(--nudexxlight) inset;
+    -moz-box-shadow: 100px 1px -100px 1px var(--nudexxlight) inset;
+    background: linear-gradient(to right, var(--nudexxlight), transparent);
+}
+.carousel-custom {
+    display: flex;
+    flex-direction: row;
+    margin: 2% auto;
+    align-items: center;
+}
+.c-see-text {
+    z-index: 5;
+    width: 70%;
+    margin-left: 5%;
+}
+.c-see-text div {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.c-see-text div p {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid var(--coklat);
+    border-radius: 10px;
+}
+.c-see-text .judul {
+    font-size: 45px;
+    margin-top: 0;
+    font-weight:300;
+    text-shadow: 4px 4px 2px var(--nude);
+}
+.link-top {
+    background-color: var(--coklat);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: var(--white);
+}
+.c-see-text h4 {
+    font-weight: 300;
+}
+.link-top:hover{
+    background-color: black;
+}

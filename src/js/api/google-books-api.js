@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const config = {
     endpoint: 'https://www.googleapis.com/books/v1/',
 };

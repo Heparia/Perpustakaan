@@ -3,6 +3,8 @@
 @import url('buku-page/carousel.scss');
 @import url('buku-page/header-book.scss');
 @import url('buku-page/tools.scss');
+@import url('others/icon-theme.scss');
+@import url('beranda-page/top-buku.scss');
 
 :root {
     --coklat: #A7727D;
@@ -11,6 +13,7 @@
     --nudexxlight: #F9F5E7;
     --white: white;
     --black: black;
+    --iconTheme: 40px;
 }
 
 body {
@@ -31,37 +34,6 @@ body {
     flex-direction: row;
     align-items: center;
 }
-
-.light-dark-mode {
-    z-index: 0;
-    background-color: var(--nudexxlight);
-    width: 80px;
-    height: 40px;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-.switcher {
-    z-index: 1;
-    background-color: var(--coklat);
-    width:40px;
-    height: 40px; 
-    border-radius: 10px; 
-
-}
-.icon-mode {
-    position: absolute;
-    width: 80px;
-    margin: auto;
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 2px;
-}
-.mode > img {
-    width: 36px;
-}
-
 
 #search-button {
     display: flex;

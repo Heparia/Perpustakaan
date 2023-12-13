@@ -1,14 +1,16 @@
 const theme = () => {
     const body = document.querySelector('body')
-    document.querySelector('.dark-icon').addEventListener('click', () => {
+    const switcher = document.getElementById('switch-theme')
+    document.getElementById('dark-icon').addEventListener('click', ()=> {
+        switcher.style.animation = 'moveRight 1s forwards'
         body.setAttribute("data-bs-theme","dark")
         console.log("berhasil mengubah tema menjadi dark");
     })
-    document.querySelector('.light-icon').addEventListener('click', () => {
+    document.getElementById('light-icon').addEventListener('click', ()=> {
+        switcher.style.animation = 'moveLeft 1s forwards'
         body.setAttribute("data-bs-theme","light")
         console.log("berhasil mengubah tema menjadi light");
     })
-    const switcher = document.getElementById('switch-theme');
 }
 
 export default theme;
