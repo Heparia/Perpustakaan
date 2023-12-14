@@ -14,6 +14,8 @@ import theme from './handle/theme.js';
 import DisplayMainBeranda from './display/beranda/display-main.js';
 import BookNewest from './handle/book/book-newest.js';
 import Beranda from './display/beranda.js';
+import pengguna from './local-storage/pengguna.js';
+import kontak from './display/kontak.js';
 
 import _ from 'lodash';
 import * as bootstrap from 'bootstrap';
@@ -42,6 +44,7 @@ const loadComponent = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  pengguna();
   Beranda(top_book)
   loadComponent()
   const navLinks = document.querySelectorAll('.nav-link');
@@ -59,7 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
             DisplayHeader()
             DisplayMain(data);
           }
+          else if(pageName =="kontak"){
+            kontak();
+          }
       });
   });
   theme()
+  window.addEventListener("scroll", () => {
+    const body = document.body;
+    if (window.scrollY > 0) {
+      body.classList.add("scrolling");
+    } else {
+      body.classList.remove("scrolling");
+    }
+  });
 });

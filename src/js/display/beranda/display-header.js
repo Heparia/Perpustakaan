@@ -1,8 +1,9 @@
 const DisplayHeaderBeranda = ()=> {
     const header = document.querySelector('header')
+    const nama = localStorage.getItem('nama_pengguna')
     header.innerHTML = `
     <div class="flex-left">
-        <h1 class="nama">Selamat datang!</h1>
+        <h1 class="nama">Selamat datang, <strong>${nama}</strong>!</h1>
         <div class="kata-kata-mutiara">
         <div class="kalimat">
             <p>Membaca buku-buku yang baik berarti memberi  makanan rohani yang baik</p>

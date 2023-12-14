@@ -1,0 +1,28 @@
+#kategori {
+    width: 80%;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 50%;
+        gap: 20px;
+        justify-content: end;
+        img {
+            margin: 0;
+            margin-right: 0;
+            width: 40%;
+            height: 40%;
+            height: auto;
+            image-rendering: optimizeQuality;
+            transition: transform 0.3s;
+        }
+    }
+}
+
+#kategori img:hover {
+    transform: scale(1.05);
+}

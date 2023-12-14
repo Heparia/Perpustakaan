@@ -1,0 +1,71 @@
+#fasilitas {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    h1 {
+        font-size: 60px;
+        font-weight:700;
+        text-transform: uppercase;
+        color: var(--coklat);
+        text-shadow: 1px 3px 0px rgba(249,245,231,0.92);
+        background: linear-gradient(to top, var(--nudexxlight), transparent);
+        width: fit-content;
+        margin: auto;
+        padding: 0;
+        margin: 1% auto;
+    }
+    img {
+        width: 20%;
+    }
+    section {
+        margin: 6% 0;
+    }
+    .judul-article p {
+        width: 50%;
+        margin: auto;
+        font-style: italic;
+    }
+    .macam {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-around;
+        gap: 20px;
+        h3 {
+            text-transform: uppercase;
+            margin-top: 5%;
+        }
+        div {
+            flex: 1;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            padding: 2%;
+            transition: transform 0.3s, opacity 0.3s;
+            p {
+                width: 65%;
+                margin: auto;
+            }
+        }
+        :first-child{
+            transform: perspective(1000px) rotateY(20deg);
+        }
+        :last-child {
+            transform: perspective(1000px) rotateY(-20deg);
+        }
+    }
+}
+#fasilitas .macam div:hover {
+    transform: scale(1.05);
+}
+#fasilitas .macam:first-child:hover,
+#fasilitas .macam:last-child:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+#fasilitas .macam div:hover {
+    background-color: var(--coklat);
+    color: var(--white);
+    img {
+        filter:brightness(3);
+    }
+}

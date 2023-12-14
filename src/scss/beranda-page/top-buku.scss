@@ -15,9 +15,12 @@
     width: var(--lebar);
     height: var(--panjang);
     display: none;
+    border-radius: 20px;
 }
 .c-see-item.active{
     display: block;
+    transform: perspective(1000px) rotateY(10deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
 }
 .c-see {
     display: flex;
@@ -42,6 +45,7 @@
     height: calc(calc(var(--panjang)/2) + 40px);
     transition: transform 0.5s ease;
     z-index: 1;
+    border-radius: 20px;
 }
 .c-see button:hover{
     transform: scale(1.1);

@@ -1,4 +1,7 @@
 import TopNewest from "./top-newest";
+import fasilitas from "./fasilitas";
+import keunggulan from "./keunggulan";
+import kategori from "./kategori";
 import chemicalImage from '../../../asset/image/chemical.jpg';
 import statistikImage from '../../../asset/image/statistika.webp';
 import masakanImage from '../../../asset/image/masakanrumah.webp';
@@ -6,6 +9,7 @@ import masakanImage from '../../../asset/image/masakanrumah.webp';
 const DisplayMainBeranda = (data) => {
     const main = document.querySelector('main')
     main.innerHTML = "";
+
     const article = document.createElement('article')
     article.id = 'topBook'
     article.className = 'carousel-custom'
@@ -22,6 +26,10 @@ const DisplayMainBeranda = (data) => {
     <div class="c-see-text"></div>`
     main.appendChild(article)
     TopNewest();
+
+    main.appendChild(fasilitas());
+    main.appendChild(keunggulan());
+    main.appendChild(kategori());
 }
 
 export default DisplayMainBeranda;
