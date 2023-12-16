@@ -10,6 +10,20 @@ book-item {
     margin: 20px;
 }
 
+book-item button {
+    color: white !important;
+}
+
+book-item .card-body button {
+    background-color: var(--coklat);
+    border: none;
+    transition: transform 0.3s, opacity 0.3s;
+}
+book-item .card-body button:hover {
+    background-color: var(--coklat);
+    transform: scale(1.1);
+}
+
 book-container > div {
     display: flex;
     flex-direction: row;

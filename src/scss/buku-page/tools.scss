@@ -1,3 +1,7 @@
+:root {
+    --panjangInput: 700px;
+}
+
 #tools, #tools-book{
     display: flex;
     flex-direction: row;
@@ -15,4 +19,29 @@
     margin: 0;
     height: max-content;
     padding: 0;
+}
+#tools-book input {
+    width: var(--panjangInput);
+}
+
+.advance-keyword {
+    margin: 20px;
+    span {
+        text-transform: capitalize;
+    }
+    select {
+        border-radius: 10px;
+        border-color: var(--coklat);
+        width: 100%;
+        padding: 10px;
+    }
+}
+#tools-book button[type="submit"] {
+    background-color: var(--coklat);
+    border: none;
+    color: white;
+    padding: 10px;
+}
+.pagination .pencarian {
+    display: none;
 }

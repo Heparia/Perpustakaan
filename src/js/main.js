@@ -16,8 +16,9 @@ import BookNewest from './handle/book/book-newest.js';
 import Beranda from './display/beranda.js';
 import pengguna from './local-storage/pengguna.js';
 import kontak from './display/kontak.js';
+import search from './handle/search.js';
 
-import _ from 'lodash';
+import _, { forIn } from 'lodash';
 import * as bootstrap from 'bootstrap';
 import Alert from 'bootstrap/js/dist/alert';
 import { Tooltip, Toast, Popover } from 'bootstrap';
@@ -46,25 +47,35 @@ const loadComponent = () => {
 document.addEventListener('DOMContentLoaded', () => {
   pengguna();
   Beranda(top_book)
-  loadComponent()
+  loadComponent();
+  search()
+  const body = document.querySelector('body')
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
       link.addEventListener('click', async function(event) {
           event.preventDefault();
           const pageName = this.getAttribute('data-page');
+          navLinks.forEach(navLink => {
+              navLink.classList.remove('clicked');
+          });
+
           if(pageName == "beranda") {
             Beranda(top_book)
             const headImg = document.querySelectorAll('.head-img');
             component(headImg, head, 'head-img');
+            body.id = 'beranda'
           }
           else if(pageName == "buku"){
             const data = await BookDefault(defaultBook);
             DisplayHeader()
             DisplayMain(data);
+            body.id = 'buku'
           }
           else if(pageName =="kontak"){
             kontak();
+            body.id = "kontak"
           }
+          this.classList.add('clicked');
       });
   });
   theme()

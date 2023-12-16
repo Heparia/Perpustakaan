@@ -1,6 +1,7 @@
 import BookCaraousel from "../../render/book-caraousel";
 import BookFiltering from "../../render/book-filtering";
 import PaginationButton from "../../render/pagination-button";
+import event from "./event";
 
 
 const DisplayMain = (data) => {
@@ -12,12 +13,6 @@ const DisplayMain = (data) => {
     artikelTools.id = 'tools'
     artikelTools.appendChild(BookFiltering())
     artikelTools.appendChild(PaginationButton())
-    artikelTools.innerHTML += 
-    `<div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-        </div>
-    </div>`
 
     const artikelCarousel = document.createElement('article')
     artikelCarousel.id = 'carouselExample'
@@ -34,6 +29,7 @@ const DisplayMain = (data) => {
     document.getElementById('next-button').addEventListener('click', () => {
         document.getElementById('next').click()
     })
+    event()
 }
 
 export default DisplayMain;

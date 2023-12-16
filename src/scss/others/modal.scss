@@ -1,0 +1,26 @@
+book-item .modal-body .informasi {
+    display: flex;
+    flex-direction: row;
+}
+.btn-close {
+    background-color: transparent !important;
+}
+book-item .modal-dialog a,
+book-item .modal-dialog a:hover {
+    background-color: var(--coklat);
+    border: none;
+    color: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
+book-item .modal-dialog a:hover  {
+    transform: scale(1.05);
+}
+.page-item a,
+.page-item a:hover{
+    background-color: var(--coklat) !important;
+    color: white;
+    transition: transform 0.3s;
+}
+.page-item a:hover{
+    transform: scale(1.05);
+}

@@ -1,1 +1,17 @@
 @import url('./form.scss');
+
+#kontak {
+    header {
+        margin: 2%;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        article {
+            flex: 1;
+        }
+        #form{
+            flex: 2;
+        }
+    }
+}
