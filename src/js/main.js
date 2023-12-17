@@ -5,6 +5,11 @@ import Icon from '../asset/image/logo.png';
 import lightIcon from '../asset/image/light.png';
 import darkIcon from '../asset/image/dark.png';
 import head from '../asset/image/head.png';
+import email from '../asset/image/email.png';
+import telp from '../asset/image/telp.png';
+import jam from '../asset/image/jam.png';
+import pinterest from '../asset/image/pinterest.png';
+import canva from '../asset/image/canva.png'
 import DisplayHeaderBeranda from './display/beranda/display-header.js';
 
 import BookDefault from './handle/book/book-default.js';
@@ -42,13 +47,25 @@ const loadComponent = () => {
   component(iconLight, lightIcon, 'light-icon');
   component(iconDark, darkIcon, 'dark-icon');
   component(headImg, head, 'head-img');
+
+  const femail = document.querySelectorAll('.icon-foot-email');
+  const ftelp = document.querySelectorAll('.icon-foot-telp');
+  const fjam = document.querySelectorAll('.icon-foot-jam');
+  component(femail, email, 'email')
+  component(ftelp, telp, 'telp')
+  component(fjam, jam, 'jam')
+  console.log(femail)
+
+  const p = document.querySelectorAll('.foot-pinterest')
+  const c = document.querySelectorAll('.foot-canva')
+  component(p, pinterest, 'pinterest')
+  component(c, canva, 'canva')
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   pengguna();
   Beranda(top_book)
   loadComponent();
-  search()
   const body = document.querySelector('body')
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {

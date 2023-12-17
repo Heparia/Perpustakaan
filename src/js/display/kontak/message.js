@@ -27,20 +27,20 @@ const message = () => {
         <div class='lingkaran-kecil'></div>
         <div class='lingkaran-kecil'></div>
     </div>
-    <form id='form-kontak'>
+    <form id="form-kontak" action="mailto:heparia.ramdhani@gmail.com?subject=Pesan%20dari%20web%20Perpustakaan" method="post" enctype="text/plain">
         <div class="container-input">
-            <label name="nama">Nama</label>
-            <input type="text" for="nama">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama">
         </div>
         <div class="container-input">
-            <label name="email">Email</label>
-            <input type="email" for="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
         </div>
         <div class="container-input">
-            <label name="pesan">Pesan</label>
-            <input type="textarea" for="pesan">
+            <label for="pesan">Pesan</label>
+            <input type='text' id="pesan" name="pesan"></input>
         </div>
-        <input type='submit' value='Kirim pesan'>
+        <input type="submit" value="Kirim pesan">
     </form>`
 
     form.appendChild(isi)

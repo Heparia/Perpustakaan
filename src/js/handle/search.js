@@ -3,7 +3,7 @@ const search = () => {
         const contentContainer = document.querySelector('body');
         contentContainer.innerHTML = contentContainer.innerHTML.replace(/<span class="highlight">([^<]+)<\/span>/gi, '$1');
       };
-    document.getElementById('form-search-page').addEventListener('focusout', removeHighlighting);
+
     document.getElementById('form-search-page').addEventListener('submit', (event) => {
       event.preventDefault();
     
@@ -14,8 +14,7 @@ const search = () => {
         alert('Tolong masukkan kata kunci yang benar!');
         return
       } else {
-      // Remove previous highlights
-      contentContainer.innerHTML = content.replace(/<span class="highlight">([^<]+)<\/span>/gi, '$1');
+      removeHighlighting()
   
       // Create a temporary div element
       const tempDiv = document.createElement('div');

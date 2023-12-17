@@ -1,9 +1,10 @@
 #kategori {
-    width: 80%;
-    margin: 10% auto;
+    width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     section {
         display: flex;
         flex-direction: row;
@@ -21,8 +22,118 @@
             transition: transform 0.3s;
         }
     }
+    #carouselFlip {
+      width: 100%;
+
+  }
+    .container-flip {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        overflow-x: hidden;
+        width: 700px;
+        button {
+          background-color: var(--nude);
+          border-radius: 100%;
+          color: var(--coklat);
+          border: none;
+          padding: 1%;
+          font-size: xx-large;
+        }
+    }
+    .c-inner {
+      overflow-x: hidden;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        margin-left: auto;
+        img {
+          box-shadow: 0 10px 10px var(--coklat);
+        }
+    }
+    book-item-flip {
+      min-width: 180px;
+      margin: 20px;
+    }
+      .model-hover {
+        width: 180px;
+        height: 250px;
+        perspective: 1000px; 
+      }
+      
+      .model-hover-inner {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.5s; 
+      }
+      
+      .model-hover:hover .model-hover-inner {
+        transform: rotateY(180deg); 
+      }
+      .model-hover-front img {
+        width: 100%;
+        height: 100%;
+        image-rendering: optimizeQuality;
+      }
+      .model-hover-front,
+      .model-hover-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+      }
+      
+      .model-hover-front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .model-hover-back {
+        background-color: var(--nudexxlight);
+        transform: rotateY(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        button {
+          font-size: medium;
+          color: var(--coklat);
+          background-color: transparent;
+          
+        }
+      }
+}
+.model-hover-back button {
+  transition: transform 0.6s, opacity 0,3s;
+}
+.model-hover-back button:hover {
+  transform: scale(1.1);
 }
 
 #kategori img:hover {
     transform: scale(1.05);
+}
+
+#judul-kategori {
+  text-transform: capitalize;
+  color: var(--coklat);
+  font-weight: 700;
+  font-size: 70px;
+}
+#judul-kategori::before{
+  content: "#";
+  background-color: var(--nude);
+  color: var(--nude);
+  margin: 20px;
+  border-radius: 20px;
+}
+.c-see-button {
+  margin-top: 5%;
+  gap: 10px;
+}
+.c-see-button button{
+  min-width: 50px;
 }

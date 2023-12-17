@@ -17,7 +17,7 @@ const BookRender = (data) => {
         'title': `${element.volumeInfo.title}`,
         'image': `${element.volumeInfo.imageLinks ? element.volumeInfo.imageLinks.thumbnail : 'Disembunyikan'}`,
         'date': `${element.volumeInfo.publishedDate ? element.volumeInfo.publishedDate : 'Disembunyikan'}`,
-        'webReaderLink': `${element.accessInfo.webReaderLink ? element.accessInfo.webReaderLink : 'Disembunyikan'}`,
+        'webReaderLink': `${element.volumeInfo.previewLink ? element.volumeInfo.previewLink : element.accessInfo.webReaderLink}`,
         'saleInfo': `${element.saleInfo.saleability ? element.saleInfo.saleability : 'Disembunyikan'}`,
         'selfLink': `${element.selfLink ? element.selfLink : 'Disembunyikan'}`,
         'country': `${element.accessInfo.country ? element.accessInfo.country : 'Disembunyikan'}`,

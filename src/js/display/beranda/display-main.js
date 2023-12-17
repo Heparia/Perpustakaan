@@ -5,6 +5,7 @@ import kategori from "./kategori";
 import chemicalImage from '../../../asset/image/chemical.jpg';
 import statistikImage from '../../../asset/image/statistika.webp';
 import masakanImage from '../../../asset/image/masakanrumah.webp';
+import event from "./event";
 
 const DisplayMainBeranda = (data) => {
     const main = document.querySelector('main')
@@ -30,6 +31,8 @@ const DisplayMainBeranda = (data) => {
     main.appendChild(fasilitas());
     main.appendChild(keunggulan());
     main.appendChild(kategori());
+    event()
+
 }
 
 export default DisplayMainBeranda;

@@ -38,7 +38,7 @@ class Book extends HTMLElement {
                 
                 <!-- Modal -->
                 <div class="modal fade" id="${this.modalId}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-dialog modal-dialog-centered modal-xl">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">${this._result.title}</h1>
@@ -117,9 +117,8 @@ class Book extends HTMLElement {
                       </div>
                       </div>
                       <div class="modal-footer">
-                        <a type="button" class="btn" href="${this._result.infoLink}">Info Link</a>
-                        <a type="button" class="btn" href="${this._result.webReaderLink}">Web Reader Link</a>
-                        <a type="button" class="btn" href="${this._result.selfLink}">Self Link</a>
+                        <a type="button" class="btn" href="${this._result.infoLink}">Info Lainnya</a>
+                        <a type="button" class="btn" href="${this._result.webReaderLink}">Preview</a>
                       </div>
                     </div>
                   </div>
