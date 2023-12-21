@@ -1,0 +1,69 @@
+@media only screen and (max-width: 1300px)  {
+    :root{
+        --lebar: 300px;
+        --panjang: 360px;
+        --panjangInput: 500px;
+    }
+    #kontak {
+        section.backdrop img {
+            width: 60%;
+            margin:10%;
+        }
+        section.backdrop {
+            border-radius: 20px 0 0 20px;
+        }
+    }
+}
+@media only screen and (max-width: 1116px)  {
+    #head-img {
+        width: 75%;
+    }
+    header .flex-left{
+        font-size: medium;
+    }
+    header .flex-left h1{
+        font-size:  45px;
+    }
+    :root{
+        --lebar: 260px;
+        --panjang: 320px;
+        --panjangInput: 300px;
+    }
+    #kontak {
+        section.backdrop img {
+            width: 30px;
+            margin:5px;
+        }
+        section.backdrop {
+            border-radius: 20px 0 0 20px;
+        }
+        .judul p {
+            font-size: smaller;
+        }
+    }
+}
+@media only screen and (max-width: 950px)  {
+    :root{
+        --lebar: 220px;
+        --panjang: 280px;
+    }
+    #kategori{
+        #carousel-flip{
+            #judul-kategori{
+                font-size: 40px;
+                margin-bottom: 0;
+            }
+        }
+        book-item-flip {
+            min-width: 130px;
+            margin: 15px;
+          }
+          .model-hover {
+            width: 130px;
+            height: 180px
+        } 
+        button {
+            font-size: xx-small;
+        }
+    }
+}

@@ -2,6 +2,11 @@ import email from '../../../asset/image/email.png';
 import telepon from '../../../asset/image/telp.png';
 import jam from '../../../asset/image/jam.png';
 
+const openMailApplication = () => {
+
+}
+
+
 const message = () => {
     const article = document.createElement('article')
     article.id = 'form';
@@ -26,22 +31,37 @@ const message = () => {
         <div class='lingkaran-kecil'></div>
         <div class='lingkaran-kecil'></div>
         <div class='lingkaran-kecil'></div>
-    </div>
-    <form id="form-kontak" action="mailto:heparia.ramdhani@gmail.com?subject=Pesan%20dari%20web%20Perpustakaan" method="post" enctype="text/plain">
+    </div>`
+
+    const formMessage = document.createElement('form')
+    formMessage.setAttribute('entype', 'text/plain')
+    formMessage.id = 'form-kontak'
+    formMessage.innerHTML = `
+    <form id="form-kontak" enctype="text/plain">
         <div class="container-input">
             <label for="nama">Nama</label>
             <input type="text" id="nama" name="nama">
         </div>
         <div class="container-input">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <label for="subject">Subjek</label>
+            <input type="subject" id="subject" name="subject">
         </div>
         <div class="container-input">
             <label for="pesan">Pesan</label>
-            <input type='text' id="pesan" name="pesan"></input>
+            <textarea id="textareaColumn5" name="textareaColumn5" rows="6" cols="30"></textarea>
         </div>
         <input type="submit" value="Kirim pesan">
     </form>`
+    formMessage.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const subject = encodeURIComponent(formMessage.querySelector('#subject').value);
+        const body = encodeURIComponent(formMessage.querySelector('#pesan').value);
+        const nama = encodeURIComponent(formMessage.querySelector('#nama').value);
+        const mailtoLink = `mailto:heparia.ramdhani@gmail.com?subject=${subject}&body=${body}%0AFrom: ${nama}`;
+        window.location.href = mailtoLink;
+    });
+
+    isi.appendChild(formMessage)
 
     form.appendChild(isi)
     
@@ -50,11 +70,11 @@ const message = () => {
     sectionIcon.classList.add('icons')
     sectionIcon.innerHTML = `
     <div>
-    <section class="backdrop">
-        <a href="#"><img src='${email}'></a>
-        <a href="#"><img src='${telepon}'></a>
-        <a href="#"><img src='${jam}'></a>
-    </section>
+        <section class="backdrop">
+            <a href="mailto:heparia.ramdhani@gmail.com?subject=Web%20Perpustakaan&body=Pesan%20dari%20web%20perpustakaan"><img src='${email}' title="heparia.ramdhani@gmail.com"></a>
+            <a href="tel:+6282135701110"><img src='${telepon}' title="+6282135701110"></a>
+            <a href="#"><img src='${jam}' title="09.00-17.00 WIB"></a>  
+        </section>
     </div>`
     article.appendChild(sectionIcon)
     return article

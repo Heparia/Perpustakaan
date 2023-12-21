@@ -1,0 +1,9 @@
+@import url('../beranda-page/hp.scss');
+@import url('../buku-page/hp.scss');
+
+@media only screen and (max-width: 361px){
+    .footer-top  {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

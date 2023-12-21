@@ -1,0 +1,107 @@
+@import url('../buku-page/tablet.scss');
+@import url('../kontak/tablet.scss');
+@media only screen and (max-width: 870px) {
+    #head-img{
+        width: 70%;
+    }
+    header .flex-left{
+        font-size: smaller;
+    }
+    header .flex-left h1{
+        font-size:  30px;
+    }
+    :root{
+        --lebar: 180px;
+        --panjang: 240px;
+    }
+    .c-see-text {
+        .judul {
+            font-size: 33px;
+        }
+        h4 {
+            font-size: 16px;
+        }
+        p, a{
+            font-size: smaller;
+        }
+    }
+    #fasilitas{
+        .judul-article h1{
+            font-size: 35px;
+        }
+        .judul-article p{
+            font-size: smaller;
+        }
+        .macam div{
+            width: 2px;
+        }
+        .macam {
+            img {
+                width: 20%;
+            }
+            p {
+                font-size: small;
+            }
+            h3 {
+                font-size: large;
+            }
+        }
+    }
+    #keunggulan{
+        section {
+            div {
+                flex: 0.6;
+            }
+            .right, .left {
+                flex: 0.5;
+                h3 {
+                    font-size: medium;
+                }
+                p {
+                    font-size: small;
+                }
+            }
+        }
+        img.center{
+            width: 90%;
+        }
+        section{
+            p{
+                font-size: medium;
+            }
+        }
+    }
+
+    #kategori{
+        #carousel-flip{
+            #judul-kategori{
+                font-size: 30px;
+                margin-bottom: 0;
+            }
+        }
+        book-item-flip {
+            min-width: 110px;
+            margin: 15px;
+          }
+          .model-hover {
+            width: 110px;
+            height: 160px
+        } 
+        button {
+            font-size: xx-small;
+        }
+    }
+    footer {
+        margin-top: 70px !important;
+        img {
+            height: 30%;
+        }
+        #pinterest {
+            height: 60px;
+        }
+        .footer-top {
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+    }
+}

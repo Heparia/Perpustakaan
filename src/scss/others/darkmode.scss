@@ -1,0 +1,24 @@
+.dark-mode{
+    .nav-link.clicked{
+        box-shadow: 0 0 5px var(--coklat),0 0 15px var(--coklat),0 0 25px var(--coklat),0 0 100px var(--coklat)  ;
+    }
+
+}
+body.dark-mode.scrolling {
+    nav.sticky-top {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        background-color: rgba(6,2,5,0.5);
+    }
+}
+body.dark-mode {
+    background-image: url(../../asset/image/bgg.png);
+    background-repeat: repeat;
+}
+.dark-mode #fasilitas .macam div {
+    background-color: rgba(255, 255, 255, 0.174);
+}
+.dark-mode {
+    book-item .card, input[type='text'], textarea {
+        background-color: rgba(255, 255, 255, 0.174) !important;
+    }
+}

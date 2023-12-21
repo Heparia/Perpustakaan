@@ -1,0 +1,42 @@
+.dark-mode {
+    header .nama, #fasilitas h1{
+        background: linear-gradient(to right, var(--coklat), white);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    } 
+    #fasilitas h1 {
+        background: none;
+    }
+    #topBook {
+        background-color: var(--coklat);
+    }
+    .front.n {
+        box-shadow: -100px 1px 100px 1px var(--coklat) inset;
+        -webkit-box-shadow: -100px 1px 100px 1px var(--coklat) inset;
+        -moz-box-shadow: -100px 1px 100px 1px var(--coklat) inset;
+        background: linear-gradient(to left, var(--coklat), transparent);
+    }
+    .front.p {
+        box-shadow: 100px 1px -100px 1px var(--coklat) inset;
+        -webkit-box-shadow: 100px 1px -100px 1px var(--coklat) inset;
+        -moz-box-shadow: 100px 1px -100px 1px var(--coklat) inset;
+        background: linear-gradient(to right, var(--coklat), transparent);
+    }
+    #topBuku .judul {
+        text-shadow: 4px 4px 2px var(--coklat);
+    }
+    .c-see-text div p{
+        border-color: var(--nudexxlight);
+    }
+    .c-see-text a{
+        background-color: #212529;
+    }
+    #fasilitas .judul-article {
+        text-shadow: 0 0 5px var(--coklat);
+    }
+    .macam div:hover {
+        box-shadow: 0 0 5px var(--coklat),0 0 15px var(--coklat),0 0 25px var(--coklat),0 0 100px var(--coklat);
+    }
+}

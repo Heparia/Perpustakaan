@@ -17,7 +17,8 @@ const keunggulan = () => {
     article.id = 'keunggulan'
 
     const sectionAtas = document.createElement('section')
-    
+    sectionAtas.classList.add('item-keunggulan')
+
     const div1 = document.createElement('div')
     div1.className = 'left'
     div1.innerHTML = `
@@ -55,6 +56,7 @@ const keunggulan = () => {
     article.appendChild(sectionAtas);
 
     const sectionBawah = document.createElement('section')
+    sectionBawah.classList.add("ket")
     sectionBawah.innerHTML = `<p>${data.keunggulan}</p>`;
     article.appendChild(sectionBawah)
 

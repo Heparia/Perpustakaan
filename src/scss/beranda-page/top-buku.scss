@@ -47,6 +47,9 @@
     z-index: 1;
     border-radius: 20px;
 }
+.c-see button .front {
+    border-radius: 20px;
+}
 .c-see button:hover{
     transform: scale(1.1);
     z-index: 10;

@@ -5,7 +5,7 @@ import komputer from '../../../asset/image/komputer.png';
 const data = {
     'judul': 'Fasilitas',
     'fasilitas': 'Perpustakaan ini lengkap dengan sofa nyaman, WiFi cepat, katalog efisien, dan fasilitas komputer terkini.',
-    'sofa': 'Santai dan nyaman untuk membaca buku',
+    'sofa': 'Nyaman untuk membaca buku',
     'wifi': 'Koneksi internet cepat dan stabil',
     'komputer': 'Mencari buku dengan mudah'
 }

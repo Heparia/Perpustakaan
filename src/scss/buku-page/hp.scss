@@ -1,0 +1,38 @@
+@media only screen and (max-width: 740px){
+    #tools {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 20px;
+    }
+    #tools-book {
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 630px){
+    :root {
+        --panjangInput: 240px;
+    }
+}
+@media only screen and (max-width: 550px){
+    :root {
+        --panjangInput: 200px;
+    }
+}
+@media only screen and (max-width: 370px){
+    :root {
+        --panjangInput: 160px;
+    }
+    #tools {
+        width: 100%;
+        nav {
+            margin-right: 15%;
+        }
+    }
+    #kontak #form{
+        gap: 0;
+    }
+    #kontak .hiasan {
+        margin-right: 20px;
+    }
+}

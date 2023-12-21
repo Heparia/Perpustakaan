@@ -10,6 +10,10 @@
 }
 #form {
     gap: 10%;
+    textarea {
+        border-color: var(--coklat);
+        border-width: 2px;
+    }
 }
 #form-kontak {
     width: 100%;

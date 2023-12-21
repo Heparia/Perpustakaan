@@ -1,0 +1,13 @@
+@media only screen and (max-width: 870px)  {
+    figure {
+        margin: auto 90px;
+    }
+    .col-12 {
+        width: fit-content !important;
+    }
+    book-item {
+        width: 280px;
+        margin: 20px;
+        display: flex;
+    }
+}
